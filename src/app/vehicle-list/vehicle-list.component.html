@@ -1,0 +1,28 @@
+<h2>Vehicle List</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Vehicle Name</th>
+            <th>Type of Vehicle</th>
+            <th>State</th>
+            <th>City</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles">
+            <td>{{vehicle.vehicleName}}</td>
+            <td>{{vehicle.typeVehicle}}</td>
+            <td>{{vehicle.state}}</td>
+            <td>{{vehicle.city}}</td>
+            <td>
+                <button (click)="updateVehicle(vehicle.id)" class="btn btn-info">Update</button>
+                <button (click)="deleteVehicle(vehicle.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                <button (click)="vehicleDetails(vehicle.id)" class="btn btn-info" style="margin-left: 10px;">View</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+
